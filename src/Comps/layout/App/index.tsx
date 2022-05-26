@@ -4,7 +4,6 @@ import { Comps_layout_Navigation_Footer } from '#src/Comps/layout/Navigation/Foo
 import { Comps_misc_Spinner } from '#src/Comps/misc/Spinner';
 import { RootState, Dispatch } from '#src/stores/model';
 import { connect } from 'react-redux';
-import { useDispatch } from 'react-redux';
 
 // import { Comps_misc_placeholder } from '#src/Comps';
 
@@ -37,7 +36,7 @@ import { useDispatch } from 'react-redux';
 //   );
 // };
 
-class Comps_layout_App extends React.PureComponent<Props> {
+export class Comps_layout_App extends React.PureComponent<Props> {
 	render() {
 		// const { countState } = this.props
 		return (
@@ -64,4 +63,4 @@ type StateProps = ReturnType<typeof mapState>
 type DispatchProps = ReturnType<typeof mapDispatch>
 type Props = StateProps & DispatchProps
  
-export default connect(mapState, mapDispatch)(Comps_layout_App)
+connect(mapState, mapDispatch)(Comps_layout_App)

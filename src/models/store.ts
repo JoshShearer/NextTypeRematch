@@ -8,7 +8,7 @@ export const store = init({
    models,
    // add selectPlugin to your store
    plugins: [
-   selectPlugin<RootModel()
+   selectPlugin<RootModel>()
    //...
    ],
 })
