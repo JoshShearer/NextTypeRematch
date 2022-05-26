@@ -43,7 +43,7 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
               <div className="flex items-center">
                 <div className="flex-shrink-0 grid grid-cols-3 gap-4">
                   <div className="text-2xl flex-shrink font-bold text-white sm:text-md">
-                    MTB DApp Token Exchange
+                    My Page Title
                   </div>
                   <div className="relative flex w-12 h-12 overflow-hidden rounded-full ">
                     <Image
@@ -63,7 +63,7 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
                       <Menu.Button className="flex text-sm ">
                         <a
                           className="text-white"
-                          href={`https://rinkeby.etherscan.io/address/${props.account}`}
+                          href={"http://www.github.com"}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -84,7 +84,7 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="joshshearer.org"
+                              href="http://www.github.com"
                               className={classNames(
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm text-gray-700'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Comps_layout_Navigation_Header } from '#src/Comps/layout/Navigation/Header';
 import { Comps_layout_Navigation_Footer } from '#src/Comps/layout/Navigation/Footer';
-import { Comps_misc_Spinner } from '#src/Comps/misc/spinner';
+import { Comps_misc_Spinner } from '#src/Comps/misc/Spinner';
 import { RootState, Dispatch } from '#src/stores/model';
 import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';

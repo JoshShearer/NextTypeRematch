@@ -6,7 +6,7 @@ const defaultProps = {
   type?: string;
 };
 
-export const Comps_misc_spinner = (_props: typeof defaultProps) => {
+export const Comps_misc_Spinner = (_props: typeof defaultProps) => {
   const props = { ...defaultProps, ..._props };
   // const selected = useSelector((state) => selector(state, props));
 
