@@ -1,26 +1,28 @@
-import { createModel, init, RematchDispatch } from '@rematch/core';
-import type { RootModel } from '#src/stores/model';
+import { createModel, RematchDispatch } from '@rematch/core';
+import type { RootModel } from '#src/models/model';
 
-const defaultState = {
-  name: '',
+type defaultState = {
+  name: string,
 };
 
 export const models_MyModel = createModel<RootModel>()({
-  state: defaultState,
+  state: {
+    name: 'initial'
+  } as defaultState,
   reducers: {
-    rename(state, payload: string): typeof defaultState {
+    reducerRename(state, payload: string): typeof defaultState {
       return {
         ...state,
         name: payload,
       };
     },
   },
-  selectors: (slice, createSelector, hasProps) => ({
+  // selectors: (slice, createSelector, hasProps) => ({
 
-  }),
-  effects: (dispatch: RematchDispatch) => ({
-    // async renameAsync(payload: string, state) {
-    //   dispatch.models_MyModel.rename(payload);
+  // }),
+  effects: (dispatch) => ({
+    // async reducerRenameAsync(payload: string, state) {
+    //   dispatch.models_MyModel.reducerRename(payload);
     // },
   }),
 });

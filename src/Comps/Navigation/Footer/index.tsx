@@ -1,13 +1,13 @@
 import React from 'react';
 const navigation = {
   main: [
-    { name: 'About', href: 'https://github.com/JoshShearer/MyCryptoExchange' },
+    { name: 'About', href: 'https://github.com/' },
     { name: 'Partners', href: 'https://joshshearer.org' },
   ],
   social: [
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/j_shearer83/',
+      href: 'https://www.instagram.com',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -20,7 +20,7 @@ const navigation = {
     },
     {
       name: 'GitHub',
-      href: 'https://github.com/JoshShearer',
+      href: 'https://github.com/',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -34,25 +34,8 @@ const navigation = {
   ],
 }   
 
-// import { createStructureSelector } from '#src/selectors/util'
-// import { userSelector } from '#src/stores/hooks';
 
-const defaultProps = {
-  key: 'default',
-  name: '',
-} as {
-  name: string;
-  key?: string;
-  children?: JSX.Element;
-};
-
-// const selector = createStructuredSelector({
-//    item: (root) => root.stores,
-// })
-
-export const Comps_layout_Navigation_Footer = (_props: typeof defaultProps) => {
-  const props = { ...defaultProps, ..._props };
-  // const selected = useSelector((state) => selector(state, props));
+export const Comps_Navigation_Footer = () => {
 
   return (
     <footer className="bg-stone-800">
@@ -74,29 +57,11 @@ export const Comps_layout_Navigation_Footer = (_props: typeof defaultProps) => {
             </a>
           ))}
         </div>
-        <p className="mt-8 text-base text-center text-gray-400">&copy; {new Date().getFullYear()} MTB Token Exchange, Inc. All rights reserved.</p>
+        <p className="mt-8 text-base text-center text-gray-400">&copy; {new Date().getFullYear()} My Company Page, Inc. All rights reserved.</p>
       </div>   
     </footer>
   )
 };
 
-// class Comps_layout_Navigation_Footer extends React.PureComponent<Props> {
-// 	render() {
-// 		const { countState } = this.props
-// 		return <div>Comps_layout_Navigation_Footer</div>
-// 	}
-// }
 
-// const mapState = (state: RootState) => ({
-// 	countState: state.count,
-// })
  
-// const mapDispatch = (dispatch: Dispatch) => ({
-// 	count: dispatch.count,
-// })
- 
-// type StateProps = ReturnType<typeof mapState>
-// type DispatchProps = ReturnType<typeof mapDispatch>
-// type Props = StateProps & DispatchProps
- 
-// export default connect(mapState, mapDispatch)(Comps_layout_Navigation_Footer)

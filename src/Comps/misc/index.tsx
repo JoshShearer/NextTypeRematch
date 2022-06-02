@@ -21,7 +21,7 @@ const defaultProps = {
 //    item: (root) => root.stores,
 // })
 
-export const Comps_misc_Spinner = (_props: typeof defaultProps) => {
+export const Comps_misc = (_props: typeof defaultProps) => {
   const props = { ...defaultProps, ..._props };
   // const selected = useSelector((state) => selector(state, props));
 
@@ -32,18 +32,18 @@ export const Comps_misc_Spinner = (_props: typeof defaultProps) => {
 
 
   return (
-    <div className="Comps_misc_Spinner">
+    <div className="Comps_misc">
       <Comps_misc_placeholder>
-        <p>Comps_misc_Spinner</p>
+        <p>Comps_misc</p>
       </Comps_misc_placeholder>
     </div>
   );
 };
 
-// export class Comps_misc_Spinner extends React.PureComponent<Props> {
+// export class Comps_misc extends React.PureComponent<Props> {
 // 	render() {
 // 		const { countState } = this.props
-// 		return <div>Comps_misc_Spinner</div>
+// 		return <div>Comps_misc</div>
 // 	}
 // }
 

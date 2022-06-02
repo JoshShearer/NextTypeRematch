@@ -1,38 +1,37 @@
-import React from 'react';
-// import { RootState, Dispatch } from '#src/stores/store'
-import react, { Fragment } from 'react';
-import { connect } from 'react-redux';
+import React, { Fragment } from 'react';
+import { RootState } from '#src/models/store'
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
+// import useSelector from 'reselect';
 
-// import { useDispatch } from 'react-redux'
+import { createStructuredSelector } from '#src/models/utils'
+import { useSelector } from '#src/models/hooks';
 
-// import { Comps_misc_placeholder } from '#src/Comps';
 
-// import { createStructureSelector } from '#src/selectors/util'
-// import { userSelector } from '#src/stores/hooks';
+// import { RootState, Actions, dispatch, store } from '#src/models/store'
+// import { models_WebB } from '../../../../models/WebB/index';
 
 const defaultProps = {
-  account: 0,
-  classes: [],
+  idKey: 'default',
 } as {
-  account: number;
-  classes: Array<string>;
+  idKey?: string;
+  children?: JSX.Element;
 };
 
 // const selector = createStructuredSelector({
-//    item: (root) => root.stores,
+//    account: (root) => root.models_WebB.account,
 // })
 
-function classNames(_props: typeof defaultProps) {
-  const props = { ...defaultProps, ..._props };
-  return props.classes.filter(Boolean).join(' ');
-}
-
-export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
+export const Comps_Navigation_Header = (_props: typeof defaultProps) => {
   const props = { ...defaultProps, ..._props };
   // const selected = useSelector((state) => selector(state, props));
+  
+  // const selected = userSelector(
+  //   (rootState: RootState) => rootState.models_WebB.account //capturing state slice (not internal selector)
+  // );
+  // const selected = useSelector(store.select.model.selectorFunction); //using state and selector (internal selector function)
+
 
   return (
     <Disclosure as="nav" className="bg-stone-600">
@@ -63,11 +62,11 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
                       <Menu.Button className="flex text-sm ">
                         <a
                           className="text-white"
-                          href={"http://www.github.com"}
+                          href={`https://rinkeby.etherscan.io/address/`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {props.account}
+                          {"model Data Test"}
                         </a>
                       </Menu.Button>
                     </div>
@@ -84,11 +83,10 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="http://www.github.com"
-                              className={classNames(
-                                active ? 'bg-gray-100' : '',
+                              href="joshshearer.org"
+                              className={
                                 'block px-4 py-2 text-sm text-gray-700'
-                              )}
+                              }
                             >
                               Your Profile
                             </a>
@@ -124,11 +122,11 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
               <div className="flex items-center px-3">
                 <a
                   className="text-white"
-                  href={`https://rinkeby.etherscan.io/address/${props.account}`}
+                  href={`https://rinkeby.etherscan.io/address/`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {props.account}
+                  {"state seletor test"}
                 </a>
               </div>
               <div className="px-2 mt-3 space-y-1">
@@ -148,23 +146,16 @@ export const Comps_layout_Navigation_Header = (_props: typeof defaultProps) => {
   );
 };
 
-// class Comps_layout_Navigation_Header extends React.PureComponent<Props> {
+// export class Comps_layout_Navigation_Header extends React.PureComponent<Props> {
 // 	render() {
 // 		const { countState } = this.props
 // 		return <div>Comps_layout_Navigation_Header</div>
 // 	}
 // }
 
-// const mapState = (state: RootState) => ({
-// account: accountSelector(state),
-// })
+// const selection = store.select((models) => ({
+//   total: models.cart.total,
+//   eligibleItems: models.cart.wouldGetFreeShipping,
+// }));
 
-// const mapDispatch = (dispatch: Dispatch) => ({
-// 	count: dispatch.count,
-// })
-
-// type StateProps = ReturnType<typeof mapState>
-// type DispatchProps = ReturnType<typeof mapDispatch>
-// type Props = StateProps & DispatchProps
-
-// export default connect(mapState)(Comps_layout_Navigation_Header)
+ 

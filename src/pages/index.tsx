@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 import { init } from '@rematch/core';
-import { Provider } from 'react-redux';
 import { Comps_layout_App } from '#src/Comps/layout/App';
 import { store } from '#src/models/store';
 import * as serviceWorker from '../serviceWorker';
@@ -18,9 +17,7 @@ const Exchange: NextPage = () => {
                 />
             </Head>
             <main>
-                <Provider store={store}>
-                    <Comps_layout_App />
-                </Provider>
+                <Comps_layout_App />
             </main>
         </div>
     )
