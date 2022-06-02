@@ -37,3 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Typescript
 - Rematch (Redux simplified State Management)
 - TailwindUI (for the CSS Styling)
+
+## Utilize creditor to create new Comps, Models, and Pages
+- An automated tool to manage the program structure and directory import aggregation
