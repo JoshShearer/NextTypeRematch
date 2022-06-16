@@ -10,7 +10,7 @@ export const CREDITOR_UNDERSCORE_NAME = createModel<RootModel>()({
     name: 'initial'
   } as defaultState,
   reducers: {
-    reducerRename(state, payload: string): typeof defaultState {
+    reducerRename(state, payload: string){
       return {
         ...state,
         name: payload,

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import useSelector from 'reselect';
 
-// import { createStructureSelector } from '#src/models/util'
-// import { userSelector } from '#src/models/hooks';
+// import { createStructuredSelector } from '#src/models/utils'
+// import { useSelector } from '#src/models/hooks';
 
 
 // import { RootState, Actions, dispatch, store } from '#src/models/store'
@@ -23,6 +23,12 @@ const defaultProps = {
 
 export const CREDITOR_UNDERSCORE_NAME = (_props: typeof defaultProps) => {
   const props = { ...defaultProps, ..._props };
+
+  
+  // useEffect(() => {
+    
+  // },[]);
+
   // const selected = useSelector((state) => selector(state, props));
 
   // const selected = useSelector(
